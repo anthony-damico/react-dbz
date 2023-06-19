@@ -2,7 +2,8 @@ import {ICharacterGetter} from "../interfaces/ICharacterGetter"
 import { listOfCharacters } from "../types/characterDictionary";
 import {useState} from "react";
 import { Character } from "../types/character";
-export class ServiceReader implements ICharacterGetter {
+import { IBaseCharacter } from "../interfaces/IBaseCharacter";
+export class ServiceReader implements ICharacterGetter<Character> {
     fetchCharacter = async (): Promise<Character | null> => {
         try {
             const randomNumber = Math.floor(Math.random() * Object.keys(listOfCharacters).length);

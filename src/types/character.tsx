@@ -1,3 +1,5 @@
+import { IBaseCharacter } from "../interfaces/IBaseCharacter";
+
 export interface Character {
     name: string;
     pic: string;

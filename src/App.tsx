@@ -5,6 +5,7 @@ import MainPage from './pages/mainPage';
 import MainPageJson from './pages/mainPageJson';
 import { MainPageFinal } from './pages/mainPageFinal';
 import { ServiceReader } from './component/serviceReader';
+import { JsonReader } from './component/jsonReader';
 
 function App() {
     const characterGetter = new ServiceReader(); // Create a new instance of ServiceReader  
