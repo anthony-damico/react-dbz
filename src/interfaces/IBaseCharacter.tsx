@@ -1,4 +1,4 @@
+import { Character } from "../types/character";
+import { CharacterFromJson } from "../types/characterFromJson";
 
-export interface IBaseCharacter {
-    
-}
+export type IBaseCharacter = Character | CharacterFromJson;

@@ -3,7 +3,7 @@ import { listOfCharacters } from "../types/characterDictionary";
 import {useState} from "react";
 import { Character } from "../types/character";
 import { IBaseCharacter } from "../interfaces/IBaseCharacter";
-export class ServiceReader implements ICharacterGetter<Character> {
+export class ServiceReader implements ICharacterGetter<IBaseCharacter> {
     fetchCharacter = async (): Promise<Character | null> => {
         try {
             const randomNumber = Math.floor(Math.random() * Object.keys(listOfCharacters).length);
@@ -23,19 +23,20 @@ export class ServiceReader implements ICharacterGetter<Character> {
         }
     };
 
-    CharacterDetails = ({ characterData }: { characterData: Character }) => {
+    CharacterDetails = ({ characterData }: { characterData: IBaseCharacter }) => {
+        var charData = characterData as Character;
         return (
             <div>
-                <h2>{characterData.name}</h2>
-                <img src={characterData.pic} alt={characterData.name} />
-                <p>About: {characterData.about}</p>
-                <p>Race: {characterData.race}</p>
-                <p>Height: {characterData.height}</p>
-                <p>Weight: {characterData.weight}</p>
-                <p>Birth Date: {characterData.birthDate}</p>
-                {/*<p>Death Dates: {characterData.deathDates.join(', ')}</p>
-                   <p>Alliegiance: {characterData.alliegiance.join(', ')}</p>
-                   <p>Relatives: {characterData.relatives.join(', ')}</p>*/}
+                <h2>{charData.name}</h2>
+                <img src={charData.pic} alt={charData.name} />
+                <p>About: {charData.about}</p>
+                <p>Race: {charData.race}</p>
+                <p>Height: {charData.height}</p>
+                <p>Weight: {charData.weight}</p>
+                <p>Birth Date: {charData.birthDate}</p>
+                {/*<p>Death Dates: {charData.deathDates.join(', ')}</p>
+                   <p>Alliegiance: {charData.alliegiance.join(', ')}</p>
+                   <p>Relatives: {charData.relatives.join(', ')}</p>*/}
             </div>
         );
     };
