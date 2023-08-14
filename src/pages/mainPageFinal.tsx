@@ -5,7 +5,7 @@ import { IBaseCharacter } from "../interfaces/IBaseCharacter";
 import { CharacterFromJson } from "../types/characterFromJson";
 
 interface MainPageFinalProps {
-    characterGetter: ICharacterGetter<Character> | ICharacterGetter<CharacterFromJson>;
+    characterGetter: ICharacterGetter<IBaseCharacter>;
 }
 
 export const MainPageFinal = ({
