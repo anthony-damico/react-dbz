@@ -1,5 +1,3 @@
-import { IBaseCharacter } from "../interfaces/IBaseCharacter";
-
 export interface CharacterFromJson {
     id: string;
     name: string;
