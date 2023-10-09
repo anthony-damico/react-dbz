@@ -7,6 +7,6 @@ export interface Character {
     weight: string;
     birthDate: string;
     deathDates: { [key: string]: string };
-   // alliegiance: string[];
-   // relatives: string[];
+    alliegiance: string[];
+    relatives: string[];
 };
