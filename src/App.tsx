@@ -8,7 +8,7 @@ import { ServiceReader } from './component/serviceReader';
 import { JsonReader } from './component/jsonReader';
 
 function App() {
-    const characterGetter = new ServiceReader(); // Create a new instance of ServiceReader  
+    const characterGetter = new JsonReader(); // Create a new instance of ServiceReader  
     
   return (
     <div className="App">
