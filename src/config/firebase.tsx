@@ -9,6 +9,7 @@ import { collection, addDoc } from "firebase/firestore";
 const firebaseConfig = {
     apiKey: "AIzaSyBezv2E_NWNMg35fVQ7bFpuFmSoLvidqPU",
     authDomain: "fir-react-dbz.firebaseapp.com",
+    databaseURL: "https://fir-react-dbz-default-rtdb.firebaseio.com",
     projectId: "fir-react-dbz",
     storageBucket: "fir-react-dbz.appspot.com",
     messagingSenderId: "619487947497",

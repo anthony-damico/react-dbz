@@ -6,7 +6,7 @@ export const addUser = async () => {
     try {
         const docRef = await addDoc(collection(db, 'users'), {
             first: 'Ada',
-            last: 'Lovelace',
+            last: 'Lovelace92',
             born: 1815,
         });
         console.log('Document written with ID: ', docRef.id);
